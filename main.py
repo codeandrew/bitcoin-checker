@@ -3,18 +3,16 @@ import config
 import bitcoin_fetcher
 import email_server
 
-def main(): 
-	config.main()
+def main():
+    config.execute()
 
-	bc = bitcoin_fetcher.request()
-	#print type(bc)
-	buy = bc.get('buy')
-	sell = bc.get('sell')
-	#print buy, sell
+    bc = bitcoin_fetcher.request()
+    buy = bc.get('buy')
+    sell = bc.get('sell')
 
-	message = "test message" 
-	
-	email_server.main(message, buy, sell)	
-	print "Final Line!" 
+    message = "Buy Bitcoins at %s. \r\nSell Bitcoins at %s " % ( buy, sell )
 
+    email_server.main(message, buy, sell)
+    print "[*] Program finished."
 
+main()
