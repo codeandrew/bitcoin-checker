@@ -29,4 +29,7 @@ def request():
 
 	return bitcoin
 
-request()
+
+if __name__ == '__main__':
+    print 'bitcoin_fetcher is main file'
+    request()
