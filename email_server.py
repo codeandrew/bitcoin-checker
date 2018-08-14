@@ -10,15 +10,17 @@ password = "hungariansausage"
 
 from_addr = email_from
 to_addr = email_to
-subject = "Bitcoin Price"
 
-def main():
+
+def main(message,buy,sell):
+
+	subject = 'Bitcoin Price, Buy:{} Sell:{}'.format(buy, sell) 
 	msg = MIMEMultipart()
 	msg['From'] = from_addr
 	msg['To'] = to_addr
 	msg['Subject'] = subject
 
-	body = "test message"
+	body = message
 	msg.attach(MIMEText(body, 'plain'))
 	
 	try:
@@ -32,4 +34,3 @@ def main():
 	except:
 		print "[!!] Error in Sending email"
 
-main()
