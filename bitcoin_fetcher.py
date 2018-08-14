@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-
 import requests
+import json
 
 url = "https://quote.coins.ph/v1/markets/BTC-PHP"
 
@@ -12,4 +12,13 @@ headers = {
 response = requests.request("GET", url, headers=headers)
 
 print response.text
+
+data = json.loads(response.text)
+market = data['market']
+buy = market.get('ask')
+sell = market.get('bid')
+
+print "Buy bitcoin at:", buy
+print "Sell bitcoin at:",  sell
+
 
