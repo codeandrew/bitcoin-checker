@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 import os
 
-SENDER_EMAIL = SENDER_EMAIL
-RECEIVER_EMAIL = RECEIVER_EMAIL
-PASSWOR = PASSWORD
-
 cwd = os.getenv('TOOLS', os.getcwd())
 
 def list():
@@ -20,5 +16,7 @@ def execute():
 
     print env.read()
 
-execute()
+if __name__ == '__main__':
+    print "Main file is config.py"
+    execute()
 
