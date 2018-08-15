@@ -1,8 +1,11 @@
 #!/usr/bin/env python
 import os
-#print os.environ
 
-pwd = os.getenv('TOOLS', os.getcwd())
+SENDER_EMAIL = SENDER_EMAIL
+RECEIVER_EMAIL = RECEIVER_EMAIL
+PASSWOR = PASSWORD
+
+cwd = os.getenv('TOOLS', os.getcwd())
 
 def list():
     for item, value in os.environ.items():
@@ -13,10 +16,9 @@ def list():
 
 
 def execute():
-    env = open( pwd + "/.env", "r")
+    env = open( cwd + "/.env", "r")
 
     print env.read()
-    print type(env.read())
 
 execute()
 
