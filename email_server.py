@@ -17,6 +17,7 @@ def main(message,buy,sell):
 
     subject = 'Bitcoin Price, Buy:%s Sell:%s' % (buy, sell)
     print "sender email:",  SENDER_EMAIL
+    print "sending email to:",  RECEIVER_EMAIL
     msg = MIMEMultipart()
     msg['From'] = from_addr
     msg['To'] = to_addr
