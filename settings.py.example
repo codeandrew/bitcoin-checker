@@ -1,0 +1,4 @@
+RECEIVER_EMAIL = "jeanandrewfuentes@gmail.com"
+
+SENDER_EMAIL = "bitcoin.checker.py@gmail.com"
+PASSWORD = "hungariansausage"
