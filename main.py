@@ -27,7 +27,6 @@ def mailManager(time, buy, sell):
 
 def main():
     print time
-    config.execute()
 
     bc = bitcoin_fetcher.request()
     buy = bc.get('buy')
